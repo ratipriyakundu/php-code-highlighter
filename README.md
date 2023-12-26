@@ -5,7 +5,7 @@ A PHP library for highlighting code syntax.
 ## Installation
 
 ```bash
-composer require demyanovs/php-highlight-example
+composer require ratipriya/php-highlight-example
 ```
 
 ## Usage
@@ -13,10 +13,10 @@ composer require demyanovs/php-highlight-example
 ```php
 <?php
 
-require_once '../vendor/autoload.php';
+require_once __DIR__.'/vendor/autoload.php';
 
-use Demyanovs\PHPHighlight\ColorsDto;
-use \Demyanovs\PHPHighlight\Highlighter;
+use Ratipriya\PHPHighlight\ColorsDto;
+use Ratipriya\PHPHighlight\Highlighter;
 
 $text = '
 <?php
