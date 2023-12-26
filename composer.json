@@ -1,0 +1,36 @@
+{
+    "name": "ratipriya/php-highlight-example",
+    "description": "A PHP library for highlighting code syntax.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ratipriyakundu",
+            "email": "ratipriyakundu6@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ratipriya\\PHPHighlight\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5",
+        "doctrine/coding-standard": "^12.0",
+        "slevomat/coding-standard": "^8.14"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ratipriya\\PHPHighlight\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit --coverage-html=test-report",
+        "linter": "./vendor/bin/phpcs"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}

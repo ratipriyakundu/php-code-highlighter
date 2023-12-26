@@ -1,26 +1,30 @@
-# Foobar
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHPHighlight example</title>
+    <style>
+        body {
+            background-color: #1E1E1E;
+        }
+    </style>
+</head>
+<body>
 
-A PHP library for highlighting code syntax.
-
-## Installation
-
-```bash
-composer require demyanovs/php-highlight-example
-```
-
-## Usage
-
-```php
 <?php
+
+// Show all errors
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 require_once '../vendor/autoload.php';
 
-use Demyanovs\PHPHighlight\ColorsDto;
-use \Demyanovs\PHPHighlight\Highlighter;
+use Ratipriya\PHPHighlight\ColorsDto;
+use Ratipriya\PHPHighlight\Highlighter;
 
 $text = '
 <?php
-
 abstract class AbstractClass
 {
     /**
@@ -28,7 +32,6 @@ abstract class AbstractClass
      */
     abstract protected function prefixName(string $name): string;
 }
-
 class ConcreteClass extends AbstractClass
 {
     /**
@@ -45,7 +48,6 @@ class ConcreteClass extends AbstractClass
         return $prefix . " " . $name;
     }
 }
-
 $class = new ConcreteClass;
 echo $class->prefixName("Pacman"), "\n";
 echo $class->prefixName("Pacwoman"), "\n";
@@ -62,15 +64,7 @@ $vs2015 = new ColorsDto(
 
 $highlighter = new Highlighter($text, $vs2015);
 echo $highlighter->highlight();
-```
 
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+?>
+</body>
+</html>
